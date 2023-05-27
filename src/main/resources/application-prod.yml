@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+# ACTUATOR
+management:
+  endpoint:
+    health:
+      show-details: never
+    metrics:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health

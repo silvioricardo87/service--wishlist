@@ -1,0 +1,50 @@
+# INFO
+info:
+  app:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    encoding: @project.build.sourceEncoding@
+    java:
+      version: @java.version@
+
+# SERVER
+server:
+  port: 8080
+  servlet:
+    context-path: ${server-servlet-context-path:/@project.name@}
+
+# SPRING
+spring:
+  application:
+    name: @project.name@
+  output:
+    ansi:
+      enabled: always
+  main:
+    lazy-initialization: true
+
+# SPRINGDOC
+springdoc:
+  show-login-endpoint: true
+  swagger-ui:
+    configUrl: ${springdoc-swagger-ui-config-url:/@project.name@/v3/api-docs/swagger-config}
+    disable-swagger-default-url: true
+    url: ${springdoc-swagger-ui-url:/@project.name@/v3/api-docs}
+    operationsSorter: alpha
+    tagsSorter: alpha
+    defaultModelsExpandDepth: -1
+
+# ACTUATOR
+management:
+  endpoint:
+    health:
+      show-details: always
+      cache:
+        time-to-live: "30s"
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health
