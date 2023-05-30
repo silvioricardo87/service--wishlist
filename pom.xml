@@ -47,7 +47,7 @@
       **/domain/exceptions/**,
       **/domain/mapper/**,
       **/domain/model/**,
-      **/com/silvioricardo/wishlist/App.java,
+      **/com/silvioricardo/wishlist/App.java
     </sonar.coverage.exclusions>
 
     <!-- BUILD PLUGINS -->
@@ -187,6 +187,7 @@
                 <exclude>**/mapper/**/*</exclude>
                 <exclude>**/repository/**/*</exclude>
                 <exclude>**/infrastructure/**/*</exclude>
+                <exclude>**/com/silvioricardo/wishlist/App.class</exclude>
               </excludes>
             </configuration>
           </execution>
@@ -202,6 +203,7 @@
                 <exclude>**/mapper/**/*</exclude>
                 <exclude>**/repository/**/*</exclude>
                 <exclude>**/infrastructure/**/*</exclude>
+                <exclude>**/com/silvioricardo/wishlist/App.class</exclude>
               </excludes>
               <rules>
                 <rule>
