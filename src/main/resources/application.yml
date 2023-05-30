@@ -12,7 +12,7 @@ info:
 server:
   port: 8080
   servlet:
-    context-path: ${server-servlet-context-path:/@project.name@}
+    context-path: ${server-servlet-context-path:/}
 
 # SPRING
 spring:
@@ -28,9 +28,9 @@ spring:
 springdoc:
   show-login-endpoint: true
   swagger-ui:
-    configUrl: ${springdoc-swagger-ui-config-url:/@project.name@/v3/api-docs/swagger-config}
+    configUrl: ${springdoc-swagger-ui-config-url:/v3/api-docs/swagger-config}
     disable-swagger-default-url: true
-    url: ${springdoc-swagger-ui-url:/@project.name@/v3/api-docs}
+    url: ${springdoc-swagger-ui-url:/v3/api-docs}
     operationsSorter: alpha
     tagsSorter: alpha
     defaultModelsExpandDepth: -1

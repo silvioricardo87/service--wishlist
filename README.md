@@ -13,5 +13,11 @@ git clone https://github.com/silvioricardo87/service--wishlist.git
 ```
 
 ## Documentação da API
+
+### Remotamente
+O serviço está publicado no Heroku e pode ser acessado em:
+- `https://service--wishlist.herokuapp.com/swagger-ui/index.html`
+
+### Localmente
 Após executar o serviço, acesse a documentação da API via Swagger em:
 - `http://localhost:8080/swagger-ui.html`

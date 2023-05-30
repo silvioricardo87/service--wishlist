@@ -38,5 +38,5 @@ docker-compose up
 ## Documentação
 Acesse a documentação da API via Swagger em:
 ```
-http://localhost:8080/service--wishlist/swagger-ui.html
+http://localhost:8080/swagger-ui.html
 ```
