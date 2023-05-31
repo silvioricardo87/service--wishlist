@@ -12,7 +12,7 @@ info:
 server:
   port: 8080
   servlet:
-    context-path: ${server-servlet-context-path:/}
+    context-path: ${SERVER_SERVLET_CONTEXT_PATH:/}
 
 # SPRING
 spring:
@@ -23,14 +23,20 @@ spring:
       enabled: always
   main:
     lazy-initialization: true
+  redis:
+    client-name: @project.name@
+    host: ${SPRING_REDIS_HOST:localhost}
+    port: ${SPRING_REDIS_PORT:6379}
+    password: ${SPRING_REDIS_PASSWORD:}
+    ssl: false
 
 # SPRINGDOC
 springdoc:
   show-login-endpoint: true
   swagger-ui:
-    configUrl: ${springdoc-swagger-ui-config-url:/v3/api-docs/swagger-config}
+    configUrl: ${SPRINGDOC_SWAGGER_UI_CONFIG_URL:/v3/api-docs/swagger-config}
     disable-swagger-default-url: true
-    url: ${springdoc-swagger-ui-url:/v3/api-docs}
+    url: ${SPRINGDOC_SWAGGER_UI_URL:/v3/api-docs}
     operationsSorter: alpha
     tagsSorter: alpha
     defaultModelsExpandDepth: -1
