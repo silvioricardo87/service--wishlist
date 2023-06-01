@@ -26,6 +26,7 @@ spring:
   data:
     mongodb:
       uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/wishlist}
+      auto-index-creation: true
   redis:
     client-name: @project.name@
     host: ${SPRING_REDIS_HOST:localhost}
