@@ -1,4 +1,4 @@
-package com.silvioricardo.wishlist.infrastructure.config;
+package com.silvioricardo.wishlist.infrastructure.config.redis;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 @EnableCaching
-public class CacheConfig {
+public class RedisCacheConfig {
 
   @Bean
   public RedisCacheConfiguration cacheConfiguration() {
