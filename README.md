@@ -6,6 +6,11 @@ Este serviço gerencia uma Lista de Desejos dos clientes.
 - [Especificações](docs/specifications.md)
 - [Guia de Instalação](docs/installation_guide.md)
 
+## Stack
+- Java 17
+- MongoDb
+- Redis
+
 ### Pré-requisitos
 Clone o repositório em sua máquina local usando o seguinte comando:
 ``` bash
