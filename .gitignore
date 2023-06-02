@@ -98,6 +98,6 @@ build/
 hs_err_pid*
 
 ## Target
-target/
-out/
+/target/
+/out/
 
