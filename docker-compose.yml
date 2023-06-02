@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  wishlist-database:
+    image: mongo:latest
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"
+
+  wishlist-cache:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  wishlist-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: wishlist-api
+    depends_on:
+      - wishlist-database
+      - wishlist-cache
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://wishlist-database:27017/wishlist
+      SPRING_REDIS_HOST: wishlist-cache
+      SPRING_REDIS_PORT: 6379
+      API_KEY_NAME: X-API-KEY
+      API_KEY_VALUE: ChaveParaAmbienteDeTeste
+    ports:
+      - "8080:8080"
+    links:
+      - wishlist-database
+      - wishlist-cache
+
+volumes:
+  mongodb_data:
+  redis_data:
