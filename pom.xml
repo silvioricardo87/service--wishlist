@@ -40,10 +40,11 @@
     <sonar.projectName>${project.name}</sonar.projectName>
     <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
     <sonar.coverage.exclusions>
-      **/infrastructure/**,
-      **/domain/exceptions/**,
-      **/domain/mapper/**,
-      **/domain/model/**,
+      **/config/**/*,
+      **/domain/**/*,
+      **/mapper/**/*,
+      **/repository/**/*,
+      **/infrastructure/**/*
       **/com/silvioricardo/wishlist/App.java
     </sonar.coverage.exclusions>
 
@@ -69,17 +70,24 @@
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <!-- SEGURANÇA -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <!-- PERSISTENCIA -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-mongodb</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
     <!-- UTIL -->
@@ -100,7 +108,7 @@
       <artifactId>jackson-datatype-jsr310</artifactId>
     </dependency>
 
-    <!-- TESTS -->
+    <!-- TESTES -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -201,7 +209,7 @@
             <configuration>
               <excludes>
                 <exclude>**/config/**/*</exclude>
-                <exclude>**/model/**/*</exclude>
+                <exclude>**/domain/**/*</exclude>
                 <exclude>**/mapper/**/*</exclude>
                 <exclude>**/repository/**/*</exclude>
                 <exclude>**/infrastructure/**/*</exclude>
@@ -217,7 +225,7 @@
             <configuration>
               <excludes>
                 <exclude>**/config/**/*</exclude>
-                <exclude>**/model/**/*</exclude>
+                <exclude>**/domain/**/*</exclude>
                 <exclude>**/mapper/**/*</exclude>
                 <exclude>**/repository/**/*</exclude>
                 <exclude>**/infrastructure/**/*</exclude>

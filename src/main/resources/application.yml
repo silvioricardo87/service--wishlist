@@ -37,6 +37,11 @@ spring:
     serialization:
       write-dates-as-timestamps: false
 
+# APP
+api-key:
+  name: ${API_KEY_NAME:X-API-KEY}
+  value: ${API_KEY_VALUE}
+
 # SPRINGDOC
 springdoc:
   show-login-endpoint: true
@@ -52,12 +57,10 @@ springdoc:
 management:
   endpoint:
     health:
-      show-details: always
-      cache:
-        time-to-live: "30s"
+      show-details: never
     metrics:
-      enabled: true
+      enabled: false
   endpoints:
     web:
       exposure:
-        include: info, health
+        include: health
