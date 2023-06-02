@@ -3,12 +3,9 @@ package com.silvioricardo.wishlist.adapter.in.web;
 import com.mongodb.DuplicateKeyException;
 import com.mongodb.MongoWriteException;
 import com.silvioricardo.wishlist.adapter.in.exception.BadRequestException;
-import com.silvioricardo.wishlist.adapter.in.exception.ForbiddenException;
 import com.silvioricardo.wishlist.adapter.in.exception.InternalErrorException;
 import com.silvioricardo.wishlist.adapter.in.exception.ResourceNotFoundException;
 import com.silvioricardo.wishlist.adapter.in.exception.UnauthorizedException;
-import com.silvioricardo.wishlist.domain.exception.ClienteNotFoundException;
-import com.silvioricardo.wishlist.domain.exception.ProdutoNotFoundException;
 import com.silvioricardo.wishlist.usecase.exception.BusinessException;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -53,12 +50,6 @@ public class GlobalExceptionHandler {
     return ResponseEntity.badRequest().body(e.getMessage());
   }
 
-  @ExceptionHandler(ForbiddenException.class)
-  @ResponseStatus(HttpStatus.FORBIDDEN)
-  public void handleForbiddenException() {
-    //
-  }
-
   @ExceptionHandler(UnauthorizedException.class)
   @ResponseStatus(HttpStatus.FORBIDDEN)
   public void handleUnauthorizedException() {
@@ -80,17 +71,5 @@ public class GlobalExceptionHandler {
   @ExceptionHandler(BusinessException.class)
   public ResponseEntity<String> handleBusinessException(BusinessException e) {
     return ResponseEntity.unprocessableEntity().body(e.getMessage());
-  }
-
-  @ExceptionHandler(ClienteNotFoundException.class)
-  @ResponseStatus(HttpStatus.NOT_FOUND)
-  public void handleClienteNotFoundException() {
-    //
-  }
-
-  @ExceptionHandler(ProdutoNotFoundException.class)
-  @ResponseStatus(HttpStatus.NOT_FOUND)
-  public void handleProdutoNotFoundException() {
-    //
   }
 }
