@@ -10,7 +10,7 @@
 
   <groupId>com.silvioricardo</groupId>
   <artifactId>service--wishlist</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <!-- SPRING PARENT -->
