@@ -40,6 +40,8 @@
     <sonar.projectName>${project.name}</sonar.projectName>
     <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
     <sonar.coverage.exclusions>
+      **/exception/**/*,
+      **/adapter/in/web/dto/**/*,
       **/config/**/*,
       **/domain/**/*,
       **/mapper/**/*,
@@ -208,6 +210,8 @@
             </goals>
             <configuration>
               <excludes>
+                <exclude>**/adapter/in/web/dto/**/*</exclude>
+                <exclude>**/exception/**/*</exclude>
                 <exclude>**/config/**/*</exclude>
                 <exclude>**/domain/**/*</exclude>
                 <exclude>**/mapper/**/*</exclude>
@@ -224,6 +228,8 @@
             </goals>
             <configuration>
               <excludes>
+                <exclude>**/adapter/in/web/dto/**/*</exclude>
+                <exclude>**/exception/**/*</exclude>
                 <exclude>**/config/**/*</exclude>
                 <exclude>**/domain/**/*</exclude>
                 <exclude>**/mapper/**/*</exclude>
