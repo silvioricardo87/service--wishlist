@@ -11,12 +11,6 @@ Este serviço gerencia uma Lista de Desejos dos clientes.
 - MongoDb
 - Redis
 
-### Pré-requisitos
-Clone o repositório em sua máquina local usando o seguinte comando:
-``` bash
-git clone https://github.com/silvioricardo87/service--wishlist.git
-```
-
 ## Documentação da API
 
 ### Remotamente
