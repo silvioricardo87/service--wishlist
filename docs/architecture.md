@@ -6,7 +6,7 @@ A arquitetura do projeto é baseada em uma abordagem de microserviços, permitin
 Faz utilização de cache para aprimorar o desempenho e reduzir a carga no banco de dados.
 
 ## Componentes Principais
-1. **Serviço de Autenticação:** Responsável pela autenticação de usuários e geração de tokens JWT para autorização.
+1. **Serviço de Autenticação:** Responsável pela autenticação das requisições via Chave de API.
 
 2. **Serviço de Lista de Desejos:** Gerencia o processamento e a manipulação itens da lista de desejos. Ele utiliza uma cache Redis para melhorar o desempenho na recuperação de dados frequentemente acessados.
 
@@ -26,5 +26,5 @@ O serviço de gerenciamento de usuários utiliza o banco de dados MongoDB para p
 ## Cache com Redis
 Para melhorar o desempenho na recuperação de dados frequentemente acessados, o serviço de processamento de pedidos utiliza o Redis como uma camada de cache. O Redis é um armazenamento em cache de alto desempenho, permitindo acesso rápido aos dados previamente consultados.
 
-## Autenticação com JWT
-A autenticação nas requisições é realizada por meio do uso de tokens JWT. Após a autenticação bem-sucedida, o serviço de autenticação gera um token JWT que é enviado nas requisições subsequentes. Esses tokens são verificados pelo serviço de autenticação para garantir a autorização adequada.
+## Autenticação via API-KEY
+A autenticação nas requisições é realizada por meio do uso de Chave de API que é validada a cada requisição para garantir a autorização adequada.

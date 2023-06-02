@@ -8,6 +8,5 @@
 - Limpa a lista.
 
 ## Pontos de atenção
-- Mais de um produto pode ser adicionado por requisição;
 - A qualquer momento o cliente poderá acessar sua lista completa.
 - Cada cliente poderá adicionar até 20 produtos (limite da lista)
