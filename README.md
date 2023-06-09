@@ -11,7 +11,7 @@ Este serviço gerencia uma Lista de Desejos dos clientes.
 - MongoDb
 - Redis
 
-## Documentação da API
+## API
 
 ### Remotamente
 O serviço está publicado no Heroku e pode ser acessado em:
