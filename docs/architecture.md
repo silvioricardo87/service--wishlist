@@ -10,7 +10,7 @@ Faz utilização de cache para aprimorar o desempenho e reduzir a carga no banco
 
 2. **Serviço de Lista de Desejos:** Gerencia o processamento e a manipulação itens da lista de desejos. Ele utiliza uma cache Redis para melhorar o desempenho na recuperação de dados frequentemente acessados.
 
-3. **Página Web:** É a interface do usuário. Ele se comunica com a API REST por meio de requisições HTTPS autenticadas com tokens JWT.
+3. **Página Web:** É a interface do usuário. Ele se comunica com a API REST por meio de requisições HTTPS autenticadas com chave de API.
 
 ## Diagrama de Arquitetura
 A seguir está o diagrama de arquitetura que ilustra a estrutura e as interações dos componentes do projeto.
